@@ -6,11 +6,12 @@ import Footer from "./components/Footer";
 import ModalMenu from "./components/ModalMenu";
 import ComingSoonPopUp from "./components/ComingSoonPopUp";
 import AboutUs from "./components/AboutUs";
-import Pounds from "./components/Pounds";
+
 import Roadmap from "./components/Roadmap";
 import Team from "./components/Team";
 import FAQ from "./components/FAQ";
 import ContactUs from "./components/ContactUs";
+import Burst from "./components/Burst";
 export default function App() {
   const [scrolled, setScrolled] = useState(false);
   const [showMenu, setShowMenu] = useState(false);
@@ -49,6 +50,7 @@ export default function App() {
 
       <HeroSection {...props_through} />
       <AboutUs {...props_through} />
+      <Burst />
       {/* <Pounds />
       <Roadmap />
       <Team />

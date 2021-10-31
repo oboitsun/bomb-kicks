@@ -3,7 +3,7 @@ import "./../styles/roadmap.scss";
 import Heading from "./Heading";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import Cloud from "./Cloud";
+
 const roadmap = [
   {
     month: "jul",
@@ -38,14 +38,6 @@ export default function Roadmap() {
   };
   return (
     <div ref={ref} id="roadmap" className="relative">
-      <motion.img
-        animate={inView ? { top: [0, -100], left: [-100, 0] } : { left: 0 }}
-        className="absolute w-1/4 left-0"
-        src="/imgs/palm-l.png"
-        alt="spot"
-      />
-
-      <Cloud direction />
       <div className="my-container ">
         <Heading>roadmap</Heading>
         <motion.div

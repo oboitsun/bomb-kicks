@@ -1,0 +1,74 @@
+.burst {
+  margin: 0 auto;
+
+  .phase {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 50%;
+  }
+  .phase1 {
+    top: 37%;
+    left: 43%;
+    width: 30%;
+    z-index: 8;
+  }
+  .phase2 {
+    top: 31%;
+    left: 32%;
+    width: 42%;
+    z-index: 7;
+  }
+  .phase3 {
+    top: 22%;
+    left: 22%;
+    width: 55%;
+    z-index: 6;
+  }
+  .phase4 {
+    top: 25%;
+    left: 26%;
+    width: 50%;
+    z-index: 5;
+  }
+  .phase5 {
+    top: 5%;
+    left: 12%;
+    width: 85%;
+    z-index: 4;
+  }
+  .phase6 {
+    top: 18%;
+    left: 15%;
+    width: 73%;
+    z-index: 3;
+  }
+  .phase7 {
+    top: 4%;
+    left: 4%;
+    width: 95%;
+    z-index: 2;
+  }
+  .phase8 {
+    width: 100%;
+    z-index: 1;
+  }
+  .line-v {
+    top: 50%;
+    left: 50%;
+    z-index: 9 !important;
+    width: 2px;
+    height: 100%;
+    background: #000;
+    transform: translateX(-50%) translateY(-50%);
+  }
+  .line-h {
+    top: 50%;
+    left: 50%;
+    z-index: 9 !important;
+    background: #000;
+    transform: translateX(-50%) translateY(-50%);
+    height: 2px;
+    width: 100%;
+  }
+}

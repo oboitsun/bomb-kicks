@@ -4,7 +4,6 @@ import "../styles/faq.scss";
 import Heading from "./Heading";
 import SubHeading from "./SubHeading";
 import { motion } from "framer-motion";
-import Cloud from "./Cloud";
 
 const faqs = [
   { qstn: "How do I buy a Juicy Kicks?", answr: "The Answer" },
@@ -15,20 +14,6 @@ const faqs = [
 export default function FAQ() {
   return (
     <div id="faq" className="relative">
-      <Cloud direction />
-      <motion.img
-        transition={{ duration: 7, repeat: "Infinity", repeatType: "loop" }}
-        className="absolute w-1/4 -left-10 z-0 flip opacity-20"
-        src="/imgs/palm-r.png"
-        alt="spot"
-      />
-      <motion.img
-        animate={{ rotate: [-5, 4, -5], transformOrigin: "bottom left" }}
-        transition={{ duration: 9, repeat: "Infinity", repeatType: "mirror" }}
-        className="absolute top-2/4 w-1/6 z-0 -left-20"
-        src="/imgs/palm-l.png"
-        alt="spot"
-      />
       <div className="my-container">
         <div className=" flex flex-col lg:grid grid-cols-2 place-items-center">
           <div className="w-full relative order-1 ">
