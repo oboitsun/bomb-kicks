@@ -1,60 +1,118 @@
 @import "./variables.scss";
 #roadmap {
-  // background: linear-gradient(180deg, #b65700 0%, #d66703 100%);
+  background-color: $maroon;
   padding: 60px 0;
-  .milestone-point {
-    display: grid;
-    grid-template-columns: 0.2fr 1fr;
-    grid-auto-rows: auto;
-    column-gap: 20px;
-  }
-  .milestone {
-    width: 100%;
-    height: 100%;
-    background: $turqs;
-    padding: 24px 30px;
-    display: flex;
-    align-items: center;
+  .roadmap-path-wrapper {
+    @apply grid grid-cols-1 relative w-full;
+    column-gap: 40px;
   }
   .milestone-month {
-    height: max-content;
-    font-size: 24px;
-    font-family: "Guerrilla";
-    color: $mustard;
-    justify-content: center;
-    line-height: 1;
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+    z-index: 9;
+    font-size: 40px;
+    text-transform: uppercase;
   }
-  .milestone-content {
+  .milestone-point {
     display: flex;
     flex-direction: column;
+    align-items: center;
+  }
+  .milestone-content {
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
   .month-heading {
-    color: $mustard;
-    font-weight: 700;
+    color: $red;
+    font-size: 18px;
   }
   .month-text {
+    text-align: center;
     color: white;
-    font-weight: 500;
+    font-size: 12px;
+  }
+  .roadmap-path {
+    position: absolute;
+    width: 100%;
+
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+  }
+  .arc {
+    overflow: hidden;
+    position: absolute;
+    width: 35%;
+    height: calc(34.5% + 4px);
+    top: 18%;
+    left: 75%;
+  }
+  .arc.arc-l {
+    height: calc(35% + 4px);
+    top: 52.5%;
+    left: -10%;
+  }
+  .arc-inner {
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+    border: 4px solid $red;
+    border-left: none;
+    border-bottom-left-radius: 0px;
+    border-top-left-radius: 0px;
+  }
+  .arc-l .arc-inner {
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+    border: 4px solid $red;
+    border-right: none;
+    border-bottom-right-radius: 0px;
+    border-top-right-radius: 0px;
+  }
+  .line-h {
+    position: absolute;
+    width: 50%;
+    height: 4px;
+    background-color: $red;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .line1 {
+    float: left;
+    top: 18%;
+  }
+  .line2 {
+    top: 52.5%;
+  }
+  .line3 {
+    top: 87.5%;
   }
   @media (min-width: 1024px) {
-    .milestone-month {
-      font-size: 40px;
-      height: 100%;
+    .roadmap-path-wrapper {
+      @apply grid grid-cols-2 relative w-full;
+      column-gap: 2%;
+      row-gap: 3.5%;
     }
-    .milestone-content {
-      flex-direction: row;
-      column-gap: 8px;
+    .month-heading {
+      font-size: 20px;
+    }
+    .month-text {
+      font-size: 14px;
     }
   }
 
   @media (min-width: 1280px) {
     padding: 90px 0;
-    .milestone-point {
-      grid-template-columns: 0.2fr 1fr;
-      column-gap: 40px;
+    .month-heading {
+      font-size: 24px;
     }
-    .milestone-month {
-      font-size: 48px;
+    .month-text {
+      font-size: 16px;
     }
   }
 }

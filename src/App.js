@@ -50,10 +50,9 @@ export default function App() {
 
       <HeroSection {...props_through} />
       <AboutUs {...props_through} />
-      <Burst />
-      {/* <Pounds />
+
       <Roadmap />
-      <Team />
+      {/* <Team />
       <FAQ />
       <ContactUs />
       <Footer {...props_through} /> */}

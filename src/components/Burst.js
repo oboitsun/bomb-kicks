@@ -2,14 +2,14 @@ import React from "react";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import "../styles/burst.scss";
-export default function Burst() {
+export default function Burst({ delay }) {
   const { ref, inView } = useInView({ threshold: 0.5 });
   const cont = {
     hide: { opacity: 1 },
     show: {
       opacity: 1,
-      delay: 1,
-      transition: { staggerChildren: 0.05, staggerDelay: 1 },
+
+      transition: { staggerChildren: 0.05, staggerDelay: 0 },
     },
   };
   const item = {
@@ -22,7 +22,7 @@ export default function Burst() {
       variants={cont}
       initial="hide"
       animate={inView ? "show" : "hidden"}
-      className="relative h-96 w-96 burst"
+      className="relative w-full burst"
     >
       <motion.img
         variants={item}

@@ -13,7 +13,7 @@ export default function HeroSection({
     <motion.div id="hero-section" className="relative">
       <img
         className=" w-full h-full  object-cover absolute bottom-0 right-0  2xl:h-auto"
-        src="/imgs/bg.png"
+        src="/imgs/bg.jpg"
         alt="bombs-splash"
       />
       <div className="gradient"></div>
