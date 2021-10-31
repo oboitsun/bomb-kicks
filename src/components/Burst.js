@@ -9,12 +9,12 @@ export default function Burst() {
     show: {
       opacity: 1,
       delay: 1,
-      transition: { staggerChildren: 0.1, staggerDelay: 1 },
+      transition: { staggerChildren: 0.05, staggerDelay: 1 },
     },
   };
   const item = {
     hide: { scale: 0, opacity: 0, rotate: 0 },
-    show: { opacity: 1, scale: 1, rotate: [0, 10], transition: { duration: 0.1 } },
+    show: { opacity: 1, scale: 1, rotate: [0, 10], transition: { duration: 0.2 } },
   };
   return (
     <motion.div
