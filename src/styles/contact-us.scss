@@ -1,0 +1,47 @@
+@import "./variables.scss";
+#contact-us {
+  padding: 40px 0;
+  .contact-grid {
+    margin: 24px 0;
+    display: grid;
+    gap: 24px;
+  }
+  .form-input {
+    padding: 12px 20px;
+    width: 100%;
+    background: #ffffff;
+  }
+  .submit {
+    font-family: "Guerrilla", sans-serif;
+    width: 100%;
+    padding: 16px 40px;
+    color: #fff;
+
+    background: $orange;
+  }
+  @media (min-width: 1024px) {
+    padding: 100px 0;
+    .contact-form {
+      display: flex;
+      flex-direction: column;
+    }
+    .contact-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+    .form-input {
+      grid-column: 1/1;
+    }
+    .comment {
+      grid-row: 1/4;
+      grid-column: 2/3;
+    }
+    .submit {
+      align-self: center;
+      width: 40%;
+      margin: 0 auto;
+    }
+  }
+
+  @media (min-width: 1280px) {
+  }
+}
