@@ -43,24 +43,6 @@
     width: 20%;
     z-index: 10;
   }
-  .web {
-    z-index: 0 !important;
-    position: absolute;
-    left: 0;
-    transform: translateX(-50%) translateY(-50%);
-    top: 30%;
-    width: 30%;
-    z-index: 10;
-  }
-  .web-r {
-    z-index: 0 t;
-    position: absolute;
-    right: 0;
-    transform: translateX(50%) translateY(50%);
-    bottom: 20%;
-    width: 40%;
-    z-index: 10;
-  }
 
   .anchor {
     font-size: 14px;
@@ -68,7 +50,7 @@
     @apply cursor-pointer  font-bold  transform transition-all;
   }
   .anchor:hover {
-    color: $lime;
+    color: $red;
     transform: scale(1.1);
   }
   .socials-icon {
@@ -77,19 +59,26 @@
     transition: all 0.5s ease-in-out;
   }
   .socials-icon:hover {
-    color: $orange;
+    color: $red;
   }
 
-  .bottom-gradient {
-    background: linear-gradient(180deg, #d66703 0%, #fd8517 100%);
-  }
-  .flip {
-    transform: scaleX(-1);
+  .special-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    padding-bottom: 40px;
   }
 
   @media (min-width: 1024px) {
+    .special-grid {
+      gap: 40px;
+      grid-template-columns: 1.5fr 1.5fr;
+    }
   }
 
   @media (min-width: 1280px) {
+    .special-grid {
+      gap: 80px;
+      grid-template-columns: 1.1fr 1.5fr;
+    }
   }
 }

@@ -18,7 +18,7 @@ export default function Burst({ delay }) {
       opacity: 1,
       scale: 1,
       rotate: [0, 10],
-      transition: { delay: delay * 0.5, duration: 0.2 },
+      transition: { delay: delay * 0.7, duration: 0.2 },
     },
   };
   return (

@@ -29,53 +29,50 @@ export default function ComingSoonPopUp({ showPopup, setShowPopup }) {
           x
         </button>
         {!showMint && (
-          <p className="text-white text-7xl text-center font-guera">Coming soon!:)</p>
+          <p className="text-white text-7xl uppercase  font-guera">Coming soon!:)</p>
         )}
         {showMint && (
-          <div className="popup-mint">
-            <p className="text-white text-xl lg:text-7xl text-center font-guera">
-              Sale live now!
-            </p>
-            <p className="text-orange text-xl lg:text-7xl text-center font-guera">
-              Charity kiwis!
-            </p>
+          <div className="popup-mint relative">
+            <img className="bomb " src="/imgs/bomb.png" alt="bomb" />
+            <p className="text-white  uppercase text-xl lg:text-5xl ">Sale live now!</p>
+            <p className="text-myRed  uppercase text-xl lg:text-5xl">Bomb Kicks!</p>
             <p className="py-4 text-center uppercase text-white font-bold">
               8888 NFTS (1 ICP / NFT)
             </p>
             <div className="popup-mint-form">
               <div className="popup-mint-item">
-                <p className="balance mr-auto">MY ICP BALANCE</p>
+                <p className="balance mr-auto">My ICP Balance</p>
                 <p className="text-orange">0 ICP</p>
               </div>
               <div className="popup-mint-item relative">
-                <p className="">MINT AMOUNT</p>
-                <div className="mx-auto flex">
+                <p className="">Mint Amount</p>
+                <div className="ml-auto mr-14 ;g:mr-20 flex">
                   <button
                     disabled={mintAmount <= 1}
                     onClick={() => {
                       setmintAmount((prev) => prev - 1);
                     }}
-                    className="uppercase font-bold cursor-pointer w-5"
+                    className="  cursor-pointer w-2"
                   >
                     -
                   </button>
-                  <p className="text-orange px-3 text-3xl">{mintAmount}</p>
+                  <p className="text-white px-3 text-lg">{mintAmount}</p>
                   <button
                     onClick={() => {
                       setmintAmount((prev) => prev + 1);
                     }}
-                    className="uppercase font-bold cursor-pointer w-5"
+                    className=" cursor-pointer w-2"
                   >
                     +
                   </button>
                 </div>
-                <button className="bg-orange text-black font-bold h-full absolute top-0 right-0 px-6">
+                <button className="bg-orange  font-bold h-full absolute top-0 right-0 pr-6">
                   MAX
                 </button>
               </div>
               <div className="popup-mint-item">
                 {" "}
-                <p className="balance mr-auto">TOTAL PRICE</p>
+                <p className="balance mr-auto">Total Price</p>
                 <p className="text-orange">{mintAmount * 1} ICP</p>
               </div>
               <button className="popup-mint-item popup-mint-button"> Mint now </button>

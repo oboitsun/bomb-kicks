@@ -1,12 +1,9 @@
 @import "./variables.scss";
 #hero-section {
-  // max-width: 1920px;
   margin: 0 auto;
   overflow: hidden;
   padding-top: 120px;
   padding-bottom: 60px;
-  // padding-bottom: 140px;
-
   display: flex;
   position: relative;
 
@@ -107,7 +104,7 @@
 
   @media (min-width: 1280px) {
     height: 847px;
-    max-height: 847px;
+    max-height: 800px;
     .timer-digits {
       font-size: 40px;
       line-height: 48px;

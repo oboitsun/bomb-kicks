@@ -1,7 +1,7 @@
 @import "./variables.scss";
 #about-us {
   background: $maroon;
-  overflow: hidden;
+
   .about {
     width: 100%;
     overflow: hidden;
@@ -35,14 +35,36 @@
     display: block;
     width: 100%;
   }
+  .bomb {
+    position: absolute;
+    top: -100px;
+    left: 70%;
+    width: 30%;
+    z-index: 10;
+  }
+  .poof {
+    position: absolute;
+    top: 0;
+    width: 15%;
+    left: -2%;
+  }
   @media (min-width: 1024px) {
-    padding: 60px 0;
+    padding: 40px 0;
+    .bomb {
+      top: -50%;
+      left: 75%;
+      width: 15%;
+    }
+    .poof {
+      width: 15%;
+      left: -17%;
+    }
     .swiper {
       width: 100%;
       padding-top: 20px;
-      padding-bottom: 20px;
     }
     .special-grid {
+      gap: 40px;
       grid-template-columns: 1.5fr 1.5fr;
     }
     .heading,
@@ -51,7 +73,12 @@
     }
   }
   @media (min-width: 1280px) {
+    .poof {
+      width: 15%;
+      left: -22%;
+    }
     .special-grid {
+      gap: 80px;
       grid-template-columns: 1.1fr 1.5fr;
     }
   }

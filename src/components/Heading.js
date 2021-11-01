@@ -10,7 +10,11 @@ export default function Heading({ children, ...props }) {
       {React.Children.map(children, (child, i) => (
         <div key={i} className="overflow-hidden">
           <motion.div
-            animate={inView ? { y: "0" } : { y: "100%" }}
+            animate={
+              inView
+                ? { y: "0", textShadow: "4px 4px 0px rgba(0,0,0,0.2)" }
+                : { y: "100%", textShadow: "0px 0px 0px rgba(0,0,0,0.2)" }
+            }
             transition={{ delay: i * 0.3, duration: 0.3 }}
             className="child"
           >

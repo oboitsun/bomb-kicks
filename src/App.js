@@ -50,12 +50,12 @@ export default function App() {
 
       <HeroSection {...props_through} />
       <AboutUs {...props_through} />
-
+      <Team />
       <Roadmap />
-      {/* <Team />
+
       <FAQ />
       <ContactUs />
-      <Footer {...props_through} /> */}
+      <Footer {...props_through} />
 
       <ComingSoonPopUp showPopup={showPopup} setShowPopup={setShowPopup} />
       <ModalMenu showMenu={showMenu} setShowMenu={setShowMenu} />

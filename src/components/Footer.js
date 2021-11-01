@@ -34,9 +34,7 @@ export default function Footer({ showPopup, setShowPopup, userAddress, setUserAd
               <Socials big />
             </div>
 
-            <p className="text-white lg:hidden text-center py-5">
-              2021 © NZ Marketing Group Limited trading as Munchy. All Rights Reserved.
-            </p>
+            <p className="text-white lg:hidden text-center py-5">2021 © Bomb Kicks</p>
           </div>
 
           <div className="hidden lg:flex text-xs xl:text-base font-bold lg:gap-8 xl:gap-10 items-center">

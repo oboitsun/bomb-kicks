@@ -1,10 +1,8 @@
 import React from "react";
 import "./../styles/roadmap.scss";
 import Heading from "./Heading";
-import { motion } from "framer-motion";
-import { useInView } from "react-intersection-observer";
-import Burst from "./Burst";
 import RoadmapPoint from "./RoadmapPoint";
+import Poof from "./Poof";
 
 const roadmap = [
   {
@@ -49,8 +47,11 @@ export default function Roadmap() {
   return (
     <div id="roadmap" className="relative">
       <div className="my-container relative">
+        <img className="absolute bomb" src="/imgs/brick.png" alt="bomb" />
+
+        <Poof className="poof" />
         <Heading>roadmap</Heading>
-        <motion.div className="line-h line1 hidden lg:block"></motion.div>
+        <div className="line-h line1 hidden lg:block"></div>
         <div className="line-h line2 hidden lg:block"></div>
         <div className="line-h line3 hidden lg:block"></div>
         <div className="arc arc-r hidden lg:block">
@@ -59,11 +60,11 @@ export default function Roadmap() {
         <div className="arc arc-l hidden lg:block">
           <div className="arc-inner"></div>
         </div>
-        <motion.div className="roadmap-path-wrapper relative">
+        <div className="roadmap-path-wrapper relative">
           {roadmap.map((point, i) => (
             <RoadmapPoint key={i} idx={i} point={point} />
           ))}
-        </motion.div>
+        </div>
       </div>
     </div>
   );

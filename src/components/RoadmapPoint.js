@@ -3,13 +3,16 @@ import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import Burst from "./Burst";
 export default function RoadmapPoint({ point, idx }) {
-  const { ref, inView } = useInView({ threshold: 0.9, triggerOnce: true });
+  const { ref, inView } = useInView({ threshold: 0.8, triggerOnce: true });
   const cont = {
-    show: { opacity: 1, transition: { staggerChildren: 0.2, delayChildren: point.key } },
+    show: { opacity: 1, transition: { staggerChildren: 0.2, delayChildren: 0.2 } },
     hidden: { opacity: 1 },
   };
   const item = {
-    show: { color: "#000", transition: { duration: 0.2 } },
+    show: {
+      color: "#000",
+      transition: { duration: 0.2 },
+    },
     hidden: { color: "#fff" },
   };
   const item1 = {
@@ -29,12 +32,20 @@ export default function RoadmapPoint({ point, idx }) {
         <motion.div key={idx} variants={item} className="milestone milestone-month">
           {point.month}
         </motion.div>
+        <img className="bomb-point" src="/imgs/bomb.png" alt="bomb" />
       </div>
       <motion.div variants={item1} key={2} className="w-3/4 milestone milestone-content">
         <p className="month-heading">{point.heading}</p>
         <p className="month-text">{point.text}</p>
       </motion.div>
-      {idx < 5 && <div className="line-v lg:hidden"></div>}
+      {idx < 5 && (
+        <motion.div
+          variants={item1}
+          animate={inView ? "show" : "hidden"}
+          key={3}
+          className="line-v lg:hidden"
+        ></motion.div>
+      )}
     </motion.div>
   );
 }

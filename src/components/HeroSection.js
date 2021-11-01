@@ -20,6 +20,11 @@ export default function HeroSection({
       <div className="bg-shade"></div>
 
       <div className="my-container relative splash">
+        <img
+          className="w-1/12 block absolute top-full left-1/3 z-10 pt-10"
+          src="/imgs/brick.png"
+          alt="brick"
+        />
         <div className="bombs relative  lg:block">
           <Bombs />
         </div>

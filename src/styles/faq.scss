@@ -1,50 +1,46 @@
 @import "./variables.scss";
 #faq {
-  // background: linear-gradient(180deg, #d66703 0%, #d66703 100%);
-  .kiwi {
-    width: 75%;
-    margin: 0 auto;
-    max-width: 400px;
-    order: 1;
-    z-index: 2;
-    position: relative;
-  }
-
   .my-container {
     display: flex;
     flex-direction: column;
     align-items: center;
   }
-  .faq-list {
-  }
-  .subheading {
-    padding-bottom: 40px;
-  }
+
   .faq-question {
-    max-width: 90%;
     font-size: 12px;
-    font-weight: 700;
-    line-height: 22px;
     text-align: left;
-    color: $orange;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 30px;
+    border-radius: 140px;
+    background: $red;
+  }
+  .faq-question-heading {
+    width: 90%;
   }
   .arrow-down {
     padding-left: 4px;
-
     transition: all 0.4s;
   }
+  .bomb {
+    position: absolute;
+    top: -25%;
+    left: 86%;
+    width: 30%;
+    z-index: 0;
+  }
   @media (min-width: 1024px) {
-    padding-top: 30px;
-    .my-container {
-    }
-    .heading {
-    }
-    .subheading {
-      padding-bottom: 40px;
+    padding-top: 120px;
+    .bomb {
+      position: absolute;
+      top: -45%;
+      left: 105%;
+      width: 20%;
+      z-index: 0;
     }
   }
 
   @media (min-width: 1280px) {
-    padding-bottom: 100px;
   }
 }

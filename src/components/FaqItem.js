@@ -12,11 +12,8 @@ export default function FaqItem({ qstn, answr }) {
   }
   return (
     <div className="lg:w-full text-white">
-      <div
-        onClick={toggleAccordion}
-        className="cursor-pointer flex w-full justify-between my-5 "
-      >
-        <p className="faq-question  ">{qstn}</p>
+      <div onClick={toggleAccordion} className="faq-question">
+        <p className="faq-question-heading">{qstn}</p>
         <img
           className={`arrow-down transform ${setActive ? "rotate-180" : "rotate-0"}`}
           src="/imgs/expand-arrow.svg"
@@ -28,9 +25,8 @@ export default function FaqItem({ qstn, answr }) {
         style={{ maxHeight: `${setHeight}` }}
         className=" transition-all overflow-hidden "
       >
-        <p className="pb-5">{answr}</p>
+        <p className="pt-5 px-10 font-mont font-medium">{answr}</p>
       </div>
-      <div className="faq-divider"></div>
     </div>
   );
 }

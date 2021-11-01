@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { motion } from "framer-motion";
 
 import "../styles/modal-menu.scss";
@@ -20,7 +20,7 @@ export default function ModalMenu({ showMenu, setShowMenu }) {
     offset: -100,
     duration: 500,
     activeClass: "active",
-    className: "cursor-pointer text-white font-bold lg:text-grey ",
+    className: "cursor-pointer text-white  ",
   };
   const cont = {
     show: {
@@ -39,7 +39,14 @@ export default function ModalMenu({ showMenu, setShowMenu }) {
       opacity: 0,
     },
   };
-
+  useEffect(() => {
+    if (showMenu && window) {
+      window.document.body.style.position = "fixed";
+    }
+    if (!showMenu && window) {
+      window.document.body.style.position = "static";
+    }
+  }, [showMenu]);
   return (
     <motion.div
       variants={cont}
