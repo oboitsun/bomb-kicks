@@ -14,7 +14,12 @@ export default function Burst({ delay }) {
   };
   const item = {
     hide: { scale: 0, opacity: 0, rotate: 0 },
-    show: { opacity: 1, scale: 1, rotate: [0, 10], transition: { duration: 0.2 } },
+    show: {
+      opacity: 1,
+      scale: 1,
+      rotate: [0, 10],
+      transition: { delay: delay * 0.5, duration: 0.2 },
+    },
   };
   return (
     <motion.div

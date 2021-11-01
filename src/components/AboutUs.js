@@ -17,7 +17,7 @@ export default function AboutUs({
         <div className="about overflow-hidden">
           <div className="w-full special-grid lg:gap-5 xl:gap-8">
             <Heading>
-              About <br />
+              <span>About</span>
               <span className="text-myRed">bomb kicks</span>
             </Heading>
             <SubHeading>
