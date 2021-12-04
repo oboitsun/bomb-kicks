@@ -5,7 +5,7 @@ import SwiperCore, { Autoplay, EffectCoverflow } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react/swiper-react.js";
 // Styles must use direct files imports
 import "swiper/swiper.scss"; // core Swiper
-import "swiper/modules/navigation/navigation.scss"; // Navigation module
+// import "swiper/modules/navigation/navigation.scss"; // Navigation module
 import "swiper/modules/pagination/pagination.scss"; // Pagination module
 import "swiper/modules/effect-coverflow/effect-coverflow.scss";
 SwiperCore.use([EffectCoverflow, Autoplay]);
